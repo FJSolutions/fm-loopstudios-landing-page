@@ -1,0 +1,18 @@
+{
+  "serve": "./",
+  "servePrefix": "",
+  "serveRedirect": false,
+  "port": 3330,
+  "bind": "localhost",
+  "watchexps": [
+    "index.html # # reload",
+    "styles/*.css # # reloadcss"
+  ],
+  "interval": 500,
+  "delay": 0,
+  "proxy": "http://localhost:9999",
+  "proxypaths": [ "/api" ],
+  "noReload": false,
+  "quiet": false,
+  "open": true
+}

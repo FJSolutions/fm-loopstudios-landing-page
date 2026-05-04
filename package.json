@@ -4,19 +4,25 @@
   "description": "My implementation of frontend Mentor's LoopStudios landing page project",
   "main": "index.js",
   "scripts": {
-    "css": "lightningcss --minify --bundle --targets \">= 0.25%\" ./src/styles/main.css -o ./styles/main.css",
-    "server": "live-server --port=3330 --ignore=*.sass",
-    "dev": "pnpm run css | pnpm run server"
+    "css": "lightningcss --bundle --targets \">= 0.25%\" ./src/styles/main.css -o ./styles/main.css",
+    "css:watch": "pnpm chokidar \"./src/styles/*.css\" -c \"pnpm run css\" ",
+    "build:css": "lightningcss --minify --bundle --targets \">= 0.25%\" ./src/styles/main.css -o ./styles/main.css",
+    "server": "light-server -c server.json",
+    "dev": "concurrently \"pnpm run css:watch\" \"pnpm run server\" "
   },
   "keywords": [],
   "author": "Francis Judge <fjudge7@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.2.1",
     "lightningcss-cli": "^1.32.0",
-    "live-server": "^1.2.2"
+    "light-server": "^2.9.1"
   },
   "packageManager": "pnpm@10.33.2",
   "pnpm": {
-    "onlyBuiltDependencies": ["lightningcss-cli"]
+    "onlyBuiltDependencies": [
+      "lightningcss-cli"
+    ]
   }
 }

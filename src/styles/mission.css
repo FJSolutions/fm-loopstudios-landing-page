@@ -1,0 +1,35 @@
+@import "./variables.css";
+
+.mission {
+    position: relative;
+    max-width: var(--max-width);
+    margin: 7rem auto 0 auto;
+    min-height: 30rem;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 65%;
+        height: 80%;
+    }
+}
+
+.mission__blurb {
+    position: absolute;
+    bottom: 5rem;
+    right: 2rem;
+    z-index: 5;
+    width: 25rem;
+    background-color: var(--White);
+    padding: 3rem 0 1rem 4rem;
+
+    h1 {
+        padding: 1rem 0;
+    }
+
+    p {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+}

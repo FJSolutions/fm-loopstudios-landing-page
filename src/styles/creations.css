@@ -1,0 +1,58 @@
+
+.creations {
+    margin: 2rem auto 8rem auto;
+    max-width: var(--max-width);
+}
+
+.creations__title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 4rem;
+
+    button {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        padding: 0.5rem 2rem;
+        cursor: pointer;
+        background-color: var(--White);
+    }
+
+    button:hover {
+        background-color: var(--Black);
+        color: var(--White);
+    }
+}
+
+.creations__cards {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.creations__card--item {
+    display: revert;
+    position: relative;
+
+    img {
+        filter: brightness(80%);
+    }
+
+    p {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 2rem;
+        color: var(--White);
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+}
+
+.creations__card--item:hover {
+    transform: scale(1.05);
+}

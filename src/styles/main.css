@@ -1,28 +1,8 @@
-
-:root {
-    --White: hsl(0, 0%, 100%);
-    --Black: hsl(0, 0%, 0%);
-    --Grey-200: hsl(0, 0%, 85%);
-
-    --Body-Font: "Josefin Sans";
-    --Heading-Font: "Alata";
-}
-
-/*//- Family: [Alata](https://fonts.google.com/specimen/Alata)*/
-/*//- Weight: 400*/
-/*//*/
-/*//- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)*/
-/*//- Weight: 300*/
-
-/*//.alata-regular {*/
-/*//  font-family: "Alata", sans-serif;*/
-/*//  font-weight: 400;*/
-/*//  font-style: normal;*/
-/*//}*/
-/*//*/
-/*//@font-face {*/
-/*//  font-family: "Josefin Sans";*/
-/*//}*/
+@import "./variables.css";
+@import "./header.css";
+@import "./mission.css";
+@import "./creations.css";
+@import "./footer.css";
 
 * {
     box-sizing: border-box;
@@ -34,10 +14,20 @@ body, html {
     font-family: var(--Body-Font), sans-serif;
     font-weight: 300;
     font-style: normal;
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
+    min-height: 100dvh;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--Heading-Font), sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: clamp(1.8rem, 1vw, 2.5rem);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    line-height: 2.3rem;
+}
+
+img {
+    width: 100%;
 }

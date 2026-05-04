@@ -1,0 +1,71 @@
+@import "./variables.css";
+
+.header {
+    background-image: url("/images/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 100dvw;
+    height: 37rem;
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.header__logo {
+    text-transform: lowercase;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    color: var(--White);
+}
+
+.header__menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    li {
+        padding: 1rem 0;
+        border-bottom: 1px solid transparent;
+    }
+}
+
+.header__menu-item {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--White);
+}
+
+.header__menu > li:has(.header__menu-item:hover) {
+    border-bottom: 1px solid var(--White);
+}
+
+.header__hero {
+    font-size: 3rem;
+    color: var(--White);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    p {
+        width: 60%;
+        padding: 2rem 2rem 1rem 2rem;
+        border: 0.2rem solid var(--White);
+        overflow: hidden;
+        margin-block-start: 8rem;
+    }
+}
+
+@media (--mobile) {
+    .header {
+        background-image: url("/images/mobile/image-hero.jpg");
+    }
+}
