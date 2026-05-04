@@ -1,0 +1,22 @@
+{
+  "name": "fbj-loopstudios-landing-page",
+  "version": "0.1.0",
+  "description": "My implementation of frontend Mentor's LoopStudios landing page project",
+  "main": "index.js",
+  "scripts": {
+    "css": "lightningcss --minify --bundle --targets \">= 0.25%\" ./src/styles/main.css -o ./styles/main.css",
+    "server": "live-server --port=3330 --ignore=*.sass",
+    "dev": "pnpm run css | pnpm run server"
+  },
+  "keywords": [],
+  "author": "Francis Judge <fjudge7@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lightningcss-cli": "^1.32.0",
+    "live-server": "^1.2.2"
+  },
+  "packageManager": "pnpm@10.33.2",
+  "pnpm": {
+    "onlyBuiltDependencies": ["lightningcss-cli"]
+  }
+}

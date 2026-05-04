@@ -1,0 +1,43 @@
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Grey-200: hsl(0, 0%, 85%);
+
+    --Body-Font: "Josefin Sans";
+    --Heading-Font: "Alata";
+}
+
+/*//- Family: [Alata](https://fonts.google.com/specimen/Alata)*/
+/*//- Weight: 400*/
+/*//*/
+/*//- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)*/
+/*//- Weight: 300*/
+
+/*//.alata-regular {*/
+/*//  font-family: "Alata", sans-serif;*/
+/*//  font-weight: 400;*/
+/*//  font-style: normal;*/
+/*//}*/
+/*//*/
+/*//@font-face {*/
+/*//  font-family: "Josefin Sans";*/
+/*//}*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    font-family: var(--Body-Font), sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--Heading-Font), sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
