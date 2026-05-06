@@ -1,9 +1,11 @@
 @import "./variables.css";
 
 .header {
+    display: flex;
+    flex-direction: column;
     background-image: url("/images/desktop/image-hero.jpg");
     background-repeat: no-repeat;
-    background-size: 100dvw;
+    background-size: cover;
     height: 37rem;
 }
 
@@ -13,6 +15,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0;
+    width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
 }
@@ -48,11 +51,15 @@
 }
 
 .header__hero {
-    font-size: 3rem;
+    flex-grow: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: clamp(2.6rem, 1vw, 3rem);
     color: var(--White);
     text-transform: uppercase;
     letter-spacing: 0.5rem;
-    max-width: var(--max-width);
+    max-width: min(var(--max-width), 100%);
     margin: 0 auto;
 
     p {
@@ -60,12 +67,28 @@
         padding: 2rem 2rem 1rem 2rem;
         border: 0.2rem solid var(--White);
         overflow: hidden;
-        margin-block-start: 8rem;
     }
 }
 
 @media (--mobile) {
     .header {
         background-image: url("/images/mobile/image-hero.jpg");
+        background-size: cover;
+        height: 95dvh;
+    }
+
+    .header__nav {
+        padding: 2rem;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header__hero {
+        p {
+            width: calc(100% - 2rem);
+            margin: 1rem;
+        }
     }
 }

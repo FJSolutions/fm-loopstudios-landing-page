@@ -28,7 +28,7 @@
 
     li {
         padding: 0 0 0.25rem 0;
-        border-bottom: 1px solid transparent;
+        border-bottom: 1px solid var(--Black);
     }
 
     li:has(a:hover) {
@@ -77,5 +77,34 @@
 
     a {
         color: var(--Grey-200);
+    }
+}
+
+@media (--mobile) {
+    .footer {
+    }
+
+    .footer__menu {
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+            flex-direction: column;
+        }
+
+        li {
+            text-align: center;
+            padding: 0;
+        }
+    }
+
+    .footer__socials {
+        margin-block-start: 2rem;
+
+        ul {
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+        }
     }
 }

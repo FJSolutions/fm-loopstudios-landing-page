@@ -115,22 +115,10 @@ come in handy for anyone viewing your solution or for yourself when you look bac
 
 ### AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively
-with AI assistants.
+I got stuck with the images in mobile view, so, after Googling for a while and trying a few things I asked Claude what I
+was doing wrong. 
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Claude Code
 
 ## Challenges
 
@@ -145,7 +133,11 @@ In this post-install script it sets up the Windows paths correctly. The fix for 
 following to the `package.json` file:
 
 ```json
-	"pnpm": {
-		"onlyBuiltDependencies": ["lightningcss-cli"]
-	}
+  "pnpm": {
+"onlyBuiltDependencies": ["lightningcss-cli"]
+}
 ```
+
+## Author
+
+- Frontend Mentor - [Francis Judge](https://www.frontendmentor.io/profile/FJSolutions)

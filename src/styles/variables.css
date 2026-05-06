@@ -1,4 +1,8 @@
 
+@custom-media --mobile (max-width: 32rem);
+@custom-media --mobile (max-width: 50rem);
+@custom-media --desktop (min-width: 50rem);
+
 :root {
     --White: hsl(0, 0%, 100%);
     --Black: hsl(0, 0%, 0%);
@@ -9,6 +13,3 @@
 
     --max-width: 56rem;
 }
-
-@custom-media --mobile (max-width: 32rem)
-@custom-media --desktop (min-width: 48rem)

@@ -1,32 +1,42 @@
 
 .creations {
-    margin: 2rem auto 8rem auto;
+    display: grid;
+    grid-template-columns: 2fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "title button" "creations creations";
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto 3rem auto;
     max-width: var(--max-width);
 }
 
 .creations__title {
+    grid-area: title;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-block-end: 4rem;
+}
 
-    button {
-        font-size: 0.65rem;
-        text-transform: uppercase;
-        letter-spacing: 0.2rem;
-        padding: 0.5rem 2rem;
-        cursor: pointer;
-        background-color: var(--White);
-    }
+.creations_button {
+    grid-area: button;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    background-color: var(--White);
+    margin-block-end: 4rem;
+}
 
-    button:hover {
-        background-color: var(--Black);
-        color: var(--White);
-    }
+.creations_button:hover {
+    background-color: var(--Black);
+    color: var(--White);
 }
 
 .creations__cards {
+    grid-area: creations;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -38,16 +48,21 @@
     display: revert;
     position: relative;
 
+    a {
+        width: 100%;
+    }
+
     img {
-        filter: brightness(80%);
+        height: 25rem;
     }
 
     p {
         position: absolute;
         bottom: 0;
         width: 100%;
-        padding: 2rem;
+        padding: 2.5rem 2rem;
         color: var(--White);
+        background: linear-gradient(0deg,rgba(0, 0, 0, 80%) 0%, rgba(255, 255, 255, 0) 100%);
         text-transform: uppercase;
         font-size: 1.5rem;
     }
@@ -55,4 +70,38 @@
 
 .creations__card--item:hover {
     transform: scale(1.05);
+}
+
+@media (--mobile) {
+    .creations {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "title" "creations" "button";
+        width: 100%;
+    }
+
+    .creations_button {
+        font-size: 1rem;
+        margin: 2rem auto 5rem auto;
+    }
+
+    .creations__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .creations__card--item {
+
+        img {
+            height: 9rem;
+            width: 100%;
+        }
+
+        p {
+            font-size: 1.8rem;
+            width: 50%;
+            height: 100%;
+            padding: 4.5rem 0 0 2rem;
+            background: linear-gradient(90deg,rgba(0, 0, 0, 80%) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
 }
