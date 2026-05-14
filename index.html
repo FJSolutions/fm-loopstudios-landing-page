@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
     <meta name="description"
           content="Francis Judge's implementation of frontend Mentor's LoopStudios landing page project">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -15,9 +14,26 @@
     <title>Loopstudios landing page</title>
 </head>
 <body>
+<div class="header__backdrop"></div>
 <header class="header">
     <nav class="header__nav">
         <h2 class="header__logo">loopstudios</h2>
+        <button type="button"
+                class="header__hamburger"
+                aria-label="show menu"
+                aria-controls="main-menu"
+                aria-haspopup="true"
+                onClick={toggleHamburger}>
+            <svg stroke="currentColor" fill="currentColor" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 100 100">
+                <rect width="80" height="10" x="10" y="20" rx="5" ry="5"
+                      class="hamburger-line hamburger-line-top"></rect>
+                <rect width="80" height="10" x="10" y="50" rx="5" ry="5"
+                      class="hamburger-line hamburger-line-middle"></rect>
+                <rect width="80" height="10" x="10" y="80" rx="5" ry="5"
+                      class="hamburger-line hamburger-line-bottom"></rect>
+            </svg>
+        </button>
         <ul class="header__menu">
             <li><a class="header__menu-item" href="#">About</a></li>
             <li><a class="header__menu-item" href="#">Careers</a></li>
@@ -53,60 +69,52 @@
         <button type="button" class="creations_button">See all</button>
         <ul class="creations__cards">
             <li class="creations__card--item"><a href="#">
-                <img src="/images/desktop/image-deep-earth.jpg"
-                     srcset="/images/mobile/image-deep-earth.jpg 654w, /images/desktop/image-deep-earth.jpg 256w"
-                     sizes="(max-width: 170px) 654w, 256px"
-                     width="256" height="450"
-                     alt="Deep earth">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/images/mobile/image-deep-earth.jpg">
+                    <img src="/images/desktop/image-deep-earth.jpg" width="256" height="450" alt="Deep earth">
+                </picture>
                 <p>Deep earth</p></a></li>
             <li class="creations__card--item"><a href="#">
-                <img src="/images/desktop/image-night-arcade.jpg"
-                     srcset="/images/mobile/image-night-arcade.jpg 654w, /images/desktop/image-night-arcade.jpg 256w"
-                     sizes="(max-width: 170px) 654w, 256px"
-                     width="256" height="450"
-                     alt="Night arcade">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/images/mobile/image-night-arcade.jpg">
+                    <img src="/images/desktop/image-night-arcade.jpg" width="256" height="450" alt="Night arcade">
+                </picture>
                 <p>Night arcade</p></a></li>
             <li class="creations__card--item"><a href="#">
-                <img src="/images/desktop/image-soccer-team.jpg"
-                     srcset="/images/mobile/image-soccer-team.jpg 654w, /images/desktop/image-soccer-team.jpg 256w"
-                     sizes="(max-width: 170px) 654w, 256px"
-                     width="256" height="450"
-                     alt="Soccer team VR">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/images/mobile/image-soccer-team.jpg">
+                    <img src="/images/desktop/image-soccer-team.jpg" width="256" height="450" alt="Soccer team VR">
+                </picture>
                 <p>Soccer team VR</p></a></li>
             <li class="creations__card--item"><a href="#">
-                <img src="/images/desktop/image-grid.jpg"
-                     srcset="/images/mobile/image-grid.jpg 654w, /images/desktop/image-grid.jpg 256w"
-                     sizes="(max-width: 170px) 654w, 256px"
-                     width="256" height="450"
-                     alt="The grid">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/images/mobile/image-grid.jpg">
+                    <img src="/images/desktop/image-grid.jpg" width="256" height="450" alt="The grid">
+                </picture>
                 <p>The <br>grid</p></a></li>
             <li class="creations__card--item"><a href="#">
-                <img src="/images/desktop/image-from-above.jpg"
-                     srcset="/images/mobile/image-from-above.jpg 654w, /images/desktop/image-from-above.jpg 256w"
-                     sizes="(max-width: 170px) 654w, 256px"
-                     width="256" height="450"
-                     alt="From up above VR">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/images/mobile/image-from-above.jpg">
+                    <img src="/images/desktop/image-from-above.jpg" width="256" height="450" alt="From up above VR">
+                </picture>
                 <p>From up above VR</p></a></li>
             <li class="creations__card--item"><a href="#">
-                <img src="/images/desktop/image-pocket-borealis.jpg"
-                     srcset="/images/mobile/image-pocket-borealis.jpg 654w, /images/desktop/image-pocket-borealis.jpg 256w"
-                     sizes="(max-width: 170px) 654w, 256px"
-                     width="256" height="450"
-                     alt="Pocket borealis">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/images/mobile/image-pocket-borealis.jpg">
+                    <img src="/images/desktop/image-pocket-borealis.jpg" width="256" height="450" alt="Pocket borealis">
+                </picture>
                 <p>Pocket borealis</p></a></li>
             <li class="creations__card--item"><a href="#">
-                <img src="/images/desktop/image-curiosity.jpg"
-                     srcset="/images/mobile/image-curiosity.jpg 654w, /images/desktop/image-curiosity.jpg 256w"
-                     sizes="(max-width: 170px) 654w, 256px"
-                     width="256" height="450"
-                     alt="The curiosity">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/images/mobile/image-curiosity.jpg">
+                    <img src="/images/desktop/image-curiosity.jpg" width="256" height="450" alt="The curiosity">
+                </picture>
                 <p>The curiosity</p></a></li>
             <li class="creations__card--item"><a href="#">
-                <img
-                     srcset="/images/mobile/image-fisheye.jpg 654w, /images/desktop/image-fisheye.jpg 256w"
-                     sizes="(max-width: 170px) 654w, 256px"
-                     width="256" height="450"
-                     alt="Make it fisheye">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/images/mobile/image-fisheye.jpg">
+                    <img src="/images/desktop/image-fisheye.jpg" width="256" height="450" alt="Make it fisheye">
+                </picture>
                 <p>Make it fisheye</p></a></li>
         </ul>
     </section>
@@ -145,6 +153,25 @@
         <p>Coded by <a target="_blank" href="https://www.frontendmentor.io/profile/FJSolutions">Francis Judge</a></p>
     </section>
 </footer>
+
+<script>
+    (function () {
+        let showMenu = false;
+        const toggleHamburger = () => {
+            showMenu = !showMenu;
+            document.body.classList.toggle('no-scroll');
+            backdrop.classList.toggle('header__backdrop--active');
+            btn.ariaExpanded = showMenu;
+        }
+
+        const btn = document.querySelector('.header__hamburger');
+        const nav = document.querySelector('.header__nav');
+        const backdrop = document.querySelector('.header__backdrop');
+        if (btn) {
+            btn.addEventListener('click', toggleHamburger);
+        }
+    })()
+</script>
 
 </body>
 </html>

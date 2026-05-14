@@ -53,6 +53,7 @@
     }
 
     img {
+        width: 100%;
         height: 25rem;
     }
 
@@ -92,8 +93,8 @@
     .creations__card--item {
 
         img {
-            height: 9rem;
             width: 100%;
+            height: 9rem;
         }
 
         p {
