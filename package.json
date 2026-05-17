@@ -6,9 +6,13 @@
   "scripts": {
     "css": "lightningcss --bundle --custom-media --targets \">= 0.25%\" ./src/styles/main.css -o ./styles/main.css",
     "css:watch": "pnpm chokidar \"./src/styles/*.css\" -c \"pnpm run css\" ",
-    "build:css": "lightningcss --minify --bundle --custom-media --targets \">= 0.25%\" ./src/styles/main.css -o ./styles/main.css",
+    "build:css": "lightningcss --minify --bundle --custom-media --targets \">= 0.25%\" ./src/styles/main.css -o ./dist/styles/main.css",
     "server": "light-server -c server.json",
-    "dev": "concurrently \"pnpm run css:watch\" \"pnpm run server\" "
+    "dev": "concurrently \"pnpm run css:watch\" \"pnpm run server\" ",
+    "clean": "shx rm -rf ./dist/",
+    "build:static": "shx cp ./index.html ./dist/ && shx cp -R images/ dist/images/",
+    "build": "pnpm clean && pnpm build:css && pnpm build:static",
+    "preview": "light-server -c preview.json"
   },
   "keywords": [],
   "author": "Francis Judge <fjudge7@gmail.com>",
@@ -17,7 +21,7 @@
     "chokidar-cli": "^3.0.0",
     "concurrently": "^9.2.1",
     "lightningcss-cli": "^1.32.0",
-    "light-server": "^2.9.1"
+    "shx": "^0.4.0"
   },
   "packageManager": "pnpm@10.33.2",
   "pnpm": {

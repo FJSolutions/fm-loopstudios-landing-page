@@ -1,0 +1,11 @@
+{
+  "serve": "./dist/",
+  "servePrefix": "",
+  "serveRedirect": false,
+  "port": 3331,
+  "bind": "localhost",
+  "interval": 500,
+  "noReload": true,
+  "quiet": false,
+  "open": true
+}
