@@ -34,7 +34,7 @@ the Frontend Mentor's [Loopstudios landing page challenge](https://www.frontendm
 ### Links
 
 - Solution URL: <https://github.com/FJSolutions/fm-loopstudios-landing-page>
-- Live Site URL: <>
+- Live Site URL: <https://fbj-loopstudios-landing-page.netlify.app>
 
 ## My process
 
